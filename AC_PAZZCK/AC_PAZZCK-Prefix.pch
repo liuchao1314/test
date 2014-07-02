@@ -12,4 +12,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import "ACUtilities.h"
+    #import "ACViewController.h"
+    #import "UITableViewPRPSubviewAdditions.h"
+    #import "AcModule.h"
+    #import "ASIHTTPRequest.h"
+    #import "SBJson.h"
+    #import "ASIFormDataRequest.h"
+    #import "MBProgressHUD.h"
+    #import "UserInfo.h"
 #endif

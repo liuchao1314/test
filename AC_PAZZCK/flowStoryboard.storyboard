@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iii-pp-oPj">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fUm-JD-ED5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ra2-Ka-Ql0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="iii-pp-oPj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="40P-XN-vCN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.87236752719999999" green="0.63264297069999997" blue="0.16678123110000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hy1-NI-BNb" kind="relationship" relationship="rootViewController" id="sUj-s0-8Sj"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-383" y="10"/>
+        </scene>
+        <!--Task Flow View Controller-->
+        <scene sceneID="DRg-Mr-Xix">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wG0-Gd-Bx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Hy1-NI-BNb" customClass="TaskFlowViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vyx-8a-fdX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="PmO-Lh-nnf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="      请结合报案信息生成案件，并按指引环节完成拍照。" id="AbY-bU-bZB">
+                                        <rect key="frame" x="11" y="7" width="299" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pzY-aM-0zA">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="zXB-pm-wVi">
+                            <connections>
+                                <action selector="back:" destination="Hy1-NI-BNb" id="eV1-mn-kUq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="下一步" id="J2q-YK-19b">
+                            <connections>
+                                <action selector="nextStep:" destination="Hy1-NI-BNb" id="gM4-pW-8VG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="PmO-Lh-nnf" id="g9C-VE-y0t"/>
+                        <outlet property="textView" destination="AbY-bU-bZB" id="NWA-Hu-MTQ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-7" y="10"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
